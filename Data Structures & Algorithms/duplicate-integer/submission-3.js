@@ -1,0 +1,18 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+        const map1 = new Map();
+
+        for(var i = 0; i < nums.length; i++) {
+            if(map1.has(nums[i])){
+                return true;
+            } else {
+                map1.set(nums[i]);
+            }
+        }
+        return false;
+    }
+}
